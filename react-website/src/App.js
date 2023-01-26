@@ -5,11 +5,13 @@ import Footer from "./components/Footer/footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages";
 import About from "./pages/about";
+import Services from "./pages/services";
+import Contact from "./pages/contact";
+import Login from "./pages/login";
 
 function App() {
   return (
     <Router>
-      
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,10 +20,13 @@ function App() {
         <Route path="about" element={<About />} />
       </Routes>
       <Routes>
-        <Route path="services" element={<services />} />
+        <Route path="services" element={<Services />} />
       </Routes>
       <Routes>
-        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
+      <Routes>
+        <Route path="sign-up" element={<Login />} />
       </Routes>
       <Footer />
     </Router>
