@@ -20,6 +20,7 @@ const Home = () => {
   }, [])
 
   return (
+    <div className="Site">
     <div className='View'>
     <motion.div ref={carousel} className='carousel' whileTap={{ cursos: "grabbing"}}>
       <motion.div className='inner-carousel'
@@ -38,6 +39,10 @@ const Home = () => {
       </motion.div>
     </motion.div>
     </div>
+
+  </div>
+
+          
 
   );
 };

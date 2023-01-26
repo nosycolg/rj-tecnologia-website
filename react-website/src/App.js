@@ -16,7 +16,14 @@ function App() {
       <Routes>
         <Route path='about' element={<About />} />
       </Routes>
+      <Routes>
+        <Route path='services' element={<services />} />
+      </Routes>
+      <Routes>
+        <Route path='about' element={<About />} />
+      </Routes>
     </Router>
+    
   );
 }
 

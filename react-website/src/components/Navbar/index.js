@@ -23,7 +23,7 @@ const Navbar = () => {
                     piroca
                 </NavLink>
                 <NavBtn>
-                    <NavBtnLink to="/sigin">Central do Cliente</NavBtnLink>
+                    <NavBtnLink to="/sigin" activestyle> Central do Cliente</NavBtnLink>
                 </NavBtn>
             </NavMenu>
             {/* <NavBtn>
