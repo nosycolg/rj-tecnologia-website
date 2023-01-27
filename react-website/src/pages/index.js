@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import image1 from "../images/300mega.png";
 import image2 from "../images/400mega.png";
 import "./indexStyle.scss";
+import { motion as m } from "framer-motion";
 
 const images = [image1, image2];
 
@@ -17,25 +18,30 @@ const Home = () => {
 
   return (
     <div className="Site">
-      <div className="View">
-        <motion.div
+      <m.div
+        className="View"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.75 }}
+      >
+        <div
           ref={carousel}
           className="carousel"
           whileTap={{ cursos: "grabbing" }}
         >
-          <motion.div
+          <div
             className="inner-carousel"
             drag="x"
             dragConstraints={{ right: 0, left: -width }}
           >
             {images.map((image) => (
-              <motion.div className="item" key={image}>
+              <div className="item" key={image}>
                 <img src={image} alt="Texto alt" />
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
-        </motion.div>
-      </div>
+          </div>
+        </div>
+      </m.div>
     </div>
   );
 };

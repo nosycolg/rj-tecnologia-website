@@ -8,6 +8,7 @@ import About from "./pages/about";
 import Services from "./pages/services";
 import Contact from "./pages/contact";
 import Login from "./pages/login";
+import { motion as m } from "framer-motion";
 
 function App() {
   return (
