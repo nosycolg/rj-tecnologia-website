@@ -1,0 +1,92 @@
+.ViewServices{
+	margin-top: 70px;
+}
+
+.cards {
+	margin: auto;
+	max-width:250px;
+
+    width: auto;
+    height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(20px);
+	border-radius: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+}
+
+.container h1 {
+	padding: 10px 30px 10px 30px;
+	border-radius: 15px;
+	background-color: red;
+  	color: white;
+  	font-weight: bold;
+	box-shadow: 2px 2px 0px black;
+	user-select: none;
+}
+
+.container h1:hover {
+    box-shadow: 1px 4px rgb(95, 0, 0), 1px 6px rgb(43, 0, 0), 1px 8px black;
+    translate: -0px -4px;
+    transition: all 0.2s ease-in-out;
+  
+}
+
+.container h3 {
+	user-select: none;
+  color: red;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+}
+
+.container h3:hover{
+	box-shadow: 1px 4px rgb(95, 0, 0), 1px 6px rgb(43, 0, 0), 1px 8px black;
+    translate: -0px -4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.wrap{
+	height: 100%;
+}
+
+.svg{
+	z-index: -999;
+	stroke:#ffffff;
+	position:fixed;
+	bottom: -100vh;
+	transform-style: preserve-3d;
+	max-width: 1860px;
+}
+
+$total: 10;
+@for $i from 1 through $total {
+	$scale:random(2) - .4;
+	
+	.svg:nth-child(#{$i}){
+		left:random(120) * 1% - 20;
+		animation: raise#{$i} 6 + random(15) +s linear infinite;
+		animation-delay:random(5) - 5 + s;
+		transform: scale(.3 * $i - .6) rotate(random(360) + deg);
+
+		filter: blur($i - 6 + px);
+
+	  @keyframes raise#{$i} {
+		  to{
+			overflow: hidden;
+			 bottom:50vw;
+			 transform: scale(.3 * $i - .6) rotate(random(360) + deg);
+			}
+		}
+	}
+}

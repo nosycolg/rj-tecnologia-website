@@ -4,11 +4,13 @@ import "../scss/contact.scss";
 import { FaWhatsapp } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
 import { FaFacebook } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
 
   return (
 
+    <div className="TelaMain">
     <div className="Tela1">
     <div className="Caixa1">
     <span className="Titulo">Entre em Contato Conosco!</span>
@@ -26,11 +28,36 @@ const Contact = () => {
         </textarea>
         </label>
         <button className="Botao">Enviar</button>
+
+
+      <div>
+        
+      <motion.img src="https://images.emojiterra.com/google/noto-emoji/v2.034/512px/1f680.png" className="foguete1"         
+                  initial={{
+                    zIndex: -9,
+                    x: -600,
+                    y: 100,
+                    scale: 0.1,
+                    rotate: 40,
+                      }}
+                  animate={{
+                    zIndex: 3,
+                    x: 180,
+                    y: -50,
+                    scale: 1.9,
+                    rotate: 0,
+                  }}
+                  transition={{ duration: 2 }}
+
+        />
+      </div>
+
     </div>
 
     <div className="Caixa2">
 
     <span className="Titulo2"> Nossas Redes Sociais! </span>
+
 
       <div className="subCaixa1">
 
@@ -41,6 +68,11 @@ const Contact = () => {
       </div>
 
       <div className="MapsBox">
+
+      <div>
+      <img className="mapspic" src="https://cdn.autopapo.com.br/box/uploads/2019/02/04111454/2000px-googlemaps_logo.svg.png"/>
+      </div>
+
       <label>
 
         <span className="Texto">Nossa Sede</span>
@@ -54,10 +86,16 @@ const Contact = () => {
         position="relative"/>
 
         </label>
+        
+
+
 
       </div>
+      
 
     </div>
+
+
 
     <div class="area" >
             <ul class="circles">
@@ -73,6 +111,10 @@ const Contact = () => {
                     <li></li>
             </ul>
     </div >
+
+    </div>
+
+
 
     </div>
     

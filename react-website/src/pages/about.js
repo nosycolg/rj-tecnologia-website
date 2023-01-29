@@ -1,6 +1,5 @@
 import React from "react";
-import "../scss/AboutStyle.scss";
-import "./about.css";
+import "../scss/about.css";
 import { motion as m } from "framer-motion";
 
 const About = () => {

@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import image1 from "../images/300mega.png";
 import image2 from "../images/400mega.png";
-import "./indexStyle.scss";
+import "../scss/indexStyle.scss";
 import Card from "../components/Card/card";
 import { motion as m } from "framer-motion";
 
