@@ -1,10 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
 import "../scss/AboutStyle.scss";
-=======
 import "./about.css";
 import { motion as m } from "framer-motion";
->>>>>>> 4730aed (services_about)
 
 const About = () => {
   return (
