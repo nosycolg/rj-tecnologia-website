@@ -1,0 +1,24 @@
+.card-container {
+  height: 350px;
+  width: 250px;
+  overflow: hidden;
+  margin: 10px;
+  transition: all 0.8s;
+}
+
+.card-container:hover {
+  box-shadow: 0px 0px 15px -5px;
+}
+
+.image-container img {
+  overflow: hidden;
+  width: 230px;
+  height: 350px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.image-container img:hover {
+  width: 240px;
+  height: 360px;
+}
