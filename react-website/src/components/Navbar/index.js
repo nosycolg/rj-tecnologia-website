@@ -1,5 +1,5 @@
 import React from "react";
-import { motion as m } from "framer-motion";
+import { motion } from "framer-motion";
 
 import {
   Nav,
@@ -14,14 +14,14 @@ const Navbar = () => {
   return (
     <>
       <Nav>
-        <m.NavLink
+        <NavLink
           to="/"
           initial={{ x: "-100%" }}
           animate={{ x: "0%" }}
           transition={{ duration: 0.75, ease: "easeOut" }}
         >
           <img src={require("../../images/logo.png")} style={{ height: 80 }} />
-        </m.NavLink>
+        </NavLink>
         <Bars />
         <NavMenu>
           <NavLink to="/about" activeStyle>
