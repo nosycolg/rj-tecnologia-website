@@ -4,6 +4,7 @@ import Card from "../components/Card/card";
 import "../scss/services.scss";
 
 const Services = () => {
+  
   const [activeStyle, setActiveStyle] = useState(false);
   return (
     <>

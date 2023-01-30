@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import image1 from "../images/300mega.png";
 import image2 from "../images/400mega.png";
 import "../scss/indexStyle.scss";
 import Card from "../components/Card/card";
 import { motion as m } from "framer-motion";
+
 
 const images = [image1, image2];
 
@@ -30,17 +30,27 @@ const Home = () => {
           className="carousel"
           whileTap={{ cursos: "grabbing" }}
         >
-          <div
+          <m.div
             className="inner-carousel"
             drag="x"
+            initial={{ 
+              x: 0
+            }}
+            animate={{ 
+              x: -width
+            }}
+            transition={{ duration: 2, ease: "linear", repeat: Infinity, repeatType: "mirror", repeatDelay: 10}}
             dragConstraints={{ right: 0, left: -width }}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+            dragElastic={0.5}
+            whileTap={{ cursor: "grabbing" }}
           >
             {images.map((image) => (
-              <div className="item" key={image}>
+              <m.div className="item" key={image}>
                 <img src={image} alt="Texto alt" />
-              </div>
+              </m.div>
             ))}
-          </div>
+          </m.div>
         </div>
       </m.div>
       <>
@@ -61,37 +71,55 @@ const Home = () => {
           </m.h3>
         </div>
         <m.div
-          className="cards"
-          initial={{ opacity: 0, y: "100%" }}
-          animate={{ opacity: 100, y: "0%" }}
-          transition={{ duration: 0.75, ease: "easeOut" }}
-        >
-          <Card
-            title="Serviços"
-            imageUrl="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/50.png"
-            body="plano"
-          />
-          <Card
-            title="Serviços"
-            imageUrl="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/100.png"
-            body="plano"
-          />
-          <Card
-            title="Serviços"
-            imageUrl="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/200.png"
-            body="plano"
-          />
-          <Card
-            title="Serviços"
-            imageUrl="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/300.png"
-            body="plano"
-          />
-          <Card
-            title="Serviços"
-            imageUrl="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/500.png"
-            body="plano"
-          />
-        </m.div>
+        className="cards"
+        initial={{ opacity: 25, y: "100%" }}
+        animate={{ opacity: 100, y: "0%" }}
+        transition={{ duration: 0.75, ease: "easeOut" }}
+      >
+        <m.img
+        className="Card"
+                initial={{ zIndex: 1 }}
+                whileHover={{ zIndex: 100, scale: 1.2 }}
+                whileTap={{ zIndex: 100, scale: 1.1 }}
+                transition={{ type: "spring", damping: 30, stiffness: 200 }}
+          src="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/50.png"
+        />
+        <m.img
+        className="Card"
+                          initial={{ zIndex: 1 }}
+                          whileHover={{ zIndex: 100, scale: 1.2 }}
+                          whileTap={{ zIndex: 100, scale: 1.1,  }}
+                          transition={{ type: "spring", damping: 30, stiffness: 200 }}
+          src="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/100.png"
+        />
+        <m.img
+          className="Card"
+          initial={{ zIndex: 1 }}
+                          whileHover={{ zIndex: 100, scale: 1.2 }}
+                          whileTap={{ zIndex: 100, scale: 1.1 }}
+                          transition={{ type: "spring", damping: 30, stiffness: 200 }}
+          src="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/200.png"
+
+        />
+        <m.img
+          className="Card"
+          initial={{ zIndex: 1 }}
+                          whileHover={{ zIndex: 100, scale: 1.2 }}
+                          whileTap={{ zIndex: 100, scale: 1.1 }}
+                          transition={{ type: "spring", damping: 30, stiffness: 200 }}
+          src="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/300.png"
+
+        />
+        <m.img
+          className="Card"
+          initial={{ zIndex: 1 }}
+                          whileHover={{ zIndex: 100, scale: 1.2 }}
+                          whileTap={{ zIndex: 100, scale: 1.1 }}
+                          transition={{ type: "spring", damping: 30, stiffness: 200 }}
+          src="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/500.png"
+
+        />
+      </m.div>
       </>
       <>
         <div className="about">
