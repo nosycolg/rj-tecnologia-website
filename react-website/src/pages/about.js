@@ -1,6 +1,7 @@
 import React from "react";
-import "../scss/about.css";
+import "../scss/about.scss";
 import { motion as m } from "framer-motion";
+import Footer from "../components/Footer/footer";
 
 const About = () => {
   return (
@@ -103,6 +104,7 @@ const About = () => {
           criando caminhos favoráveis e práticos sem muita burocracia.
         </m.p>
       </div>
+      <Footer />
     </>
   );
 };

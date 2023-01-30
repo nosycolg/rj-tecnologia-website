@@ -1,19 +1,36 @@
-.ViewServices{
-	margin-top: 70px;
+.ViewServices {
+  margin-top: 70px;
 }
 
-
-
 .cards {
-	margin: auto;
-	max-width:250px;
-	overflow-y: none;
-    width: auto;
-    height: auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50px;
+  margin: auto;
+  max-width: 250px;
+  overflow-y: none;
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(250px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  @media screen and (max-width: 1108px) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+
+  @media screen and (max-width: 790px) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+
+  @media screen and (max-width: 450px) {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
 }
 
 .container {
@@ -22,28 +39,46 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+  @media screen and (max-width: 652px) {
+    width: 90%;
+    padding: 1rem;
+  }
 
+  @media screen and (max-width: 450px) {
+    width: 80%;
+    padding: 1rem;
+  }
 }
 
 .container h1 {
-	padding: 10px 30px 10px 30px;
-	border-radius: 15px;
-	background-color: red;
-  	color: white;
-  	font-weight: bold;
-	box-shadow: 2px 2px 0px black;
-	user-select: none;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  user-select: none;
+  @media screen and (max-width: 760px) {
+    width: 450px;
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 450px) {
+    width: 300px;
+    font-size: 1.3rem;
+  }
 }
 
 .container h1:hover {
-    box-shadow: 1px 4px rgb(95, 0, 0), 1px 6px rgb(43, 0, 0), 1px 8px black;
-    translate: -0px -4px;
-    transition: all 0.2s ease-in-out;
-  
+  box-shadow: 1px 4px rgb(95, 0, 0), 1px 6px rgb(43, 0, 0), 1px 8px black;
+  translate: -0px -4px;
+  transition: all 0.2s ease-in-out;
 }
 
 .container h3 {
-	user-select: none;
+  user-select: none;
   color: red;
   font-weight: bold;
   background-color: #fff;
@@ -52,43 +87,43 @@
   translate: 0px -10px;
 }
 
-.container h3:hover{
-	box-shadow: 1px 4px rgb(95, 0, 0), 1px 6px rgb(43, 0, 0), 1px 8px black;
-    translate: -0px -14px;
-    transition: all 0.2s ease-in-out;
+.container h3:hover {
+  box-shadow: 1px 4px rgb(95, 0, 0), 1px 6px rgb(43, 0, 0), 1px 8px black;
+  translate: -0px -14px;
+  transition: all 0.2s ease-in-out;
 }
 
-.wrap{
-	height: 100%;
+.wrap {
+  height: 100%;
 }
 
-.svg{
-	z-index: -999;
-	stroke:#ffffff;
-	position:fixed;
-	bottom: -100vh;
-	transform-style: preserve-3d;
-	max-width: 1860px;
+.svg {
+  z-index: -999;
+  stroke: #ffffff;
+  position: fixed;
+  bottom: -100vh;
+  transform-style: preserve-3d;
+  max-width: 1860px;
 }
 
 $total: 10;
 @for $i from 1 through $total {
-	$scale:random(2) - .4;
-	
-	.svg:nth-child(#{$i}){
-		left:random(120) * 1% - 20;
-		animation: raise#{$i} 6 + random(15) +s linear infinite;
-		animation-delay:random(5) - 5 + s;
-		transform: scale(.3 * $i - .6) rotate(random(360) + deg);
+  $scale: random(2) - 0.4;
 
-		filter: blur($i - 6 + px);
+  .svg:nth-child(#{$i}) {
+    left: random(120) * 1% - 20;
+    animation: raise#{$i} 6 + random(15) + s linear infinite;
+    animation-delay: random(5) - 5 + s;
+    transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
 
-	  @keyframes raise#{$i} {
-		  to{
-			overflow: hidden;
-			 bottom:50vw;
-			 transform: scale(.3 * $i - .6) rotate(random(360) + deg);
-			}
-		}
-	}
+    filter: blur($i - 6 + px);
+
+    @keyframes raise#{$i} {
+      to {
+        overflow: hidden;
+        bottom: 50vw;
+        transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
+      }
+    }
+  }
 }

@@ -29,7 +29,7 @@ const Navbar = () => {
             Sobre
           </NavLink>
           <NavLink to="/services" activeStyle>
-            Servicos
+            Serviços
           </NavLink>
           <NavLink to="/contact" activeStyle>
             Contato
