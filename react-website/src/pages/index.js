@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
+import Footer from "../components/Footer/footer";
 import image1 from "../images/300mega.png";
 import image2 from "../images/400mega.png";
 import "../scss/indexStyle.scss";
@@ -221,6 +222,7 @@ const Home = () => {
             burocracia.
           </m.p>
         </div>
+        <Footer />
       </>
     </div>
   );
