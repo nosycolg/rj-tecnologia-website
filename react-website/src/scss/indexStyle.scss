@@ -12,8 +12,8 @@
 }
 
 .item {
-  min-height: 100%;
-  min-width: 100%;
+  min-height: 80%;
+  min-width: 80%;
 }
 
 .item img {
@@ -24,6 +24,7 @@
 }
 
 .carousel {
+  margin: 30px;
   cursor: grab;
   overflow: hidden;
 }

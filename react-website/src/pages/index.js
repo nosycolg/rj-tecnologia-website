@@ -11,7 +11,7 @@ const images = [image1, image2];
 
 const Home = () => {
   const carousel = useRef();
-  const [width, setWidth] = useState(0);
+  const [Width, setWidth] = useState(0);
 
   useEffect(() => {
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
@@ -37,10 +37,10 @@ const Home = () => {
               x: 0
             }}
             animate={{ 
-              x: -width
+              x: -Width
             }}
             transition={{ duration: 2, ease: "linear", repeat: Infinity, repeatType: "mirror", repeatDelay: 10}}
-            dragConstraints={{ right: 0, left: -width }}
+            dragConstraints={{ right: 0, left: -Width }}
             dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
             dragElastic={0.5}
             whileTap={{ cursor: "grabbing" }}
