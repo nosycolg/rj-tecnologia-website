@@ -100,37 +100,38 @@
 }
 
 .wrap1 {
-  height: 100%;
+  height: 100vh;
+  
 
 }
 
 .svg1 {
-  z-index: 0;
-  stroke: #ffffff;
-  position: absolute;
-  bottom: -100vh;
-  transform-style: preserve-3d;
-  max-width: 1860px;
+	z-index: -999;
+	stroke:#ff000057;
+	position:relative;
+	bottom: 0vh;
+	transform-style: preserve-3d;
+	max-width: 1860px;
 }
 
-$total: 10;
+$total: 40;
 @for $i from 1 through $total {
-  $scale: random(2) - 0.4;
+	$scale:random(2) - .4;
 
-  .svg:nth-child(#{$i}) {
-    left: random(120) * 1% - 20;
-    animation: raise#{$i} 6 + random(15) + s linear infinite;
-    animation-delay: random(5) - 5 + s;
-    transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
+	.svg1:nth-child(#{$i}){
+		left:random(120) * 1% - 20;
+		animation: raise#{$i} 6 + random(15) +s linear infinite;
+		animation-delay:random(5) - 5 + s;
+		transform: scale(.3 * $i - .6) rotate(random(360) + deg);
 
-    filter: blur($i - 6 + px);
+		filter: blur($i - 6 + px);
 
-    @keyframes raise#{$i} {
-      to {
-        overflow: hidden;
-        bottom: 50vw;
-        transform: scale(0.3 * $i - 0.6) rotate(random(360) + deg);
-      }
-    }
-  }
+	  @keyframes raise#{$i} {
+		  to{
+			overflow: hidden;
+			 bottom:150vw;
+			 transform: scale(.3 * $i - .6) rotate(random(360) + deg);
+			}
+		}
+	}
 }

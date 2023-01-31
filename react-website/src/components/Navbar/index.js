@@ -38,7 +38,8 @@ const Navbar = () => {
             Login
           </NavLink>
           <NavBtn>
-            <NavBtnLink to="/sigin" activestyle>
+            <NavBtnLink activestyle>
+            
               {" "}
               Central do Cliente
             </NavBtnLink>

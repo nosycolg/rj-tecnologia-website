@@ -10,6 +10,7 @@ body, html {
   margin: 0;
   overflow-y: scroll;
   background-image: linear-gradient(to top, #2e1753, #1f1746, #131537, #0d1028, #000000);
+  z-index: -9999;
   position: relative;
   min-height: 100vh;
 }

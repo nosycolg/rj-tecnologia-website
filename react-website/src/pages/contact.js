@@ -5,7 +5,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Footer from "../components/Footer/footer";
 
 const Contact = () => {
   return (
@@ -97,12 +96,6 @@ const Contact = () => {
           </div>
 
           <div className="MapsBox">
-            <div>
-              <img
-                className="mapspic"
-                src="https://cdn.autopapo.com.br/box/uploads/2019/02/04111454/2000px-googlemaps_logo.svg.png"
-              />
-            </div>
 
             <label>
               <span className="Texto">Nossa Sede</span>

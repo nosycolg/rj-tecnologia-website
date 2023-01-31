@@ -21,6 +21,9 @@
 
 
 .Caixa1{
+    text-align: center;
+    gap: 10px;
+    z-index: 9999;
     margin-top: 70px;
     background-color: red;
     display: flex;
@@ -73,6 +76,7 @@
 // }
 
 .Caixa2{
+    z-index: 10;
     margin-top: 70px;
     display: flex;
     flex-direction: column;
@@ -115,6 +119,7 @@
 }
 
 .Caixa1 {
+    
     background: #fb1f1f;
     font-family: inherit;
     padding: 0.6em 1.3em;
@@ -309,14 +314,12 @@
 
 .circles li{
     position: absolute;
-    display: block;
     list-style: none;
     width: 20px;
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
     bottom: -150px;
-    
 }
 
 .circles li:nth-child(1){

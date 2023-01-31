@@ -32,7 +32,11 @@ const About = () => {
             e parceiros.
           </m.p>
 
-          <img className="ondas" src={Waves} alt="Ondas"/>
+          <m.img className="ondas" src={Waves} alt="Ondas"
+          initial={{ y: "100%" }}
+          animate={{ y: "0%" }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+          />
 
         </div>
         <div className="img">
