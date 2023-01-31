@@ -1,5 +1,9 @@
 .ViewServices {
-  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 100px;
+  height: 100vh;
 }
 
 .cards {
@@ -56,6 +60,7 @@
   background-color: red;
   color: white;
   font-weight: bold;
+  text-align: center;
   user-select: none;
   @media screen and (max-width: 760px) {
     width: 450px;
@@ -78,6 +83,7 @@
 }
 
 .container h3 {
+  text-align: center;
   user-select: none;
   color: red;
   font-weight: bold;
@@ -93,14 +99,15 @@
   transition: all 0.2s ease-in-out;
 }
 
-.wrap {
+.wrap1 {
   height: 100%;
+
 }
 
-.svg {
-  z-index: -999;
+.svg1 {
+  z-index: 0;
   stroke: #ffffff;
-  position: fixed;
+  position: absolute;
   bottom: -100vh;
   transform-style: preserve-3d;
   max-width: 1860px;

@@ -10,7 +10,7 @@ import Footer from "../components/Footer/footer";
 const Contact = () => {
   return (
     <div className="TelaMain">
-      <div className="Tela1">
+      <div className="Tela2">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -120,7 +120,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div class="area">
+        <div class="area1">
           <ul class="circles">
             <li></li>
             <li></li>
@@ -135,7 +135,7 @@ const Contact = () => {
           </ul>
         </div>
       </div>
-      <Footer />
+
     </div>
   );
 };

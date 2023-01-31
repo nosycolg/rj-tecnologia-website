@@ -7,7 +7,9 @@ import About from "./pages/about";
 import Services from "./pages/services";
 import Contact from "./pages/contact";
 import Login from "./pages/login";
-import PulseLoader from "react-spinners/PulseLoader";
+import Footer from "./components/Footer/footer";
+import logo from "./images/logo.png";
+import {motion as m} from 'framer-motion';
 function App() {
   const [loading, setLoading] = useState(false);
 
@@ -15,27 +17,19 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 1000);
   }, []);
-
-  const override: CSSProperties = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-    height: "100vh",
-  };
   return (
     <>
       {loading ? (
-        <PulseLoader
-          color={"#f91600"}
-          loading={loading}
-          cssOverride={override}
-          size={30}
-          aria-label="Loading Spinner"
-          data-testid="loader"
+        <div className="LoadScene">
+        <m.img src={logo} 
+          className="imgloading"
+          initial={{ opacity: 0, width: "70%" }}
+          animate={{ opacity: 100, width: "60%" }}
+          transition={{ duration: 0.75, ease: "easeOut" }}       
         />
+        </div>
       ) : (
         <div className="app">
           <Router>
@@ -55,6 +49,7 @@ function App() {
             <Routes>
               <Route path="sign-up" element={<Login />} />
             </Routes>
+            <Footer />
           </Router>
         </div>
       )}

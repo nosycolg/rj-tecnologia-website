@@ -1,40 +1,63 @@
-.about {
-  background-color: #a80c0c;
+.Site999{
+  text-align: center;
+  max-width: 1879px;
+  margin: auto;
+}
+
+.about1 {
   display: flex;
-  justify-content: left;
+  background-color: #a80c0c;
   align-items: center;
+
   @media screen and (max-width: 750px) {
-    height: 60vh;
+
   }
   @media screen and (max-width: 412px) {
     display: flex;
-    height: 50vh;
+    flex-wrap: wrap;
+    height: 50px;
     justify-content: center;
     align-items: center;
   }
 }
 
 .aboutItem {
+  border-radius: 300px 700px 670px 330px / 300px 280px 720px 700px;
+  background-color: rgb(255, 255, 255);
   display: flex;
   width: 50%;
-  height: 100vh;
+  height: 700px;
   flex-direction: column;
   justify-content: center;
-  margin-left: 50px;
+
   align-items: right;
 
   @media screen and (max-width: 412px) {
     display: flex;
-    height: 50vh;
+    height: 800px;
     justify-content: center;
     align-items: center;
   }
 }
 
+.ondas{
+  max-width: 1879px;
+  position:absolute;
+  top: 500px;
+
+
+
+
+}
+
+.QuemSomos{
+  color: black;
+}
+
 .aboutItem h1 {
   color: black;
   font-weight: bold;
-  width: 345px;
+
   @media screen and (max-width: 375px) {
     width: 345px;
     font-size: 2.5rem;
@@ -42,7 +65,11 @@
 }
 
 .aboutItem p {
-  color: #fff;
+  display: flex;
+  align-self: center;
+
+  width: 800px;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   @media screen and (max-width: 730px) {
     width: 600px;
@@ -56,12 +83,20 @@
 }
 
 .img {
+
   padding: 30px;
   height: 50%;
   max-width: 50%;
   @media screen and (max-width: 730px) {
     display: none;
   }
+}
+
+.img img{
+  border-radius: 50px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow:  20px 20px 79px #000000,
+               -20px -20px 79px #000000;
 }
 
 .about2 {

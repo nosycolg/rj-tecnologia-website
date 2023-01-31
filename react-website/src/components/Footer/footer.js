@@ -1,5 +1,5 @@
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import styles from "../Footer/Footer.module.css";
+import styles from "../Footer/Footer.module.scss";
 import { motion as m } from "framer-motion";
 
 function Footer() {
@@ -27,7 +27,7 @@ function Footer() {
         animate={{ x: "0%" }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <m.span>RJ Tecnologia</m.span> &copy; 2023
+        <m.span>RJ Tecnologia</m.span>
       </m.p>
     </footer>
   );

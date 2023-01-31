@@ -4,7 +4,7 @@ import "../scss/404.scss";
 const Login = () => {
   return (
     <div
-      className="Site"
+      className="Site2"
       style={{
         display: "flex",
         justifyContent: "center",

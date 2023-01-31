@@ -2,20 +2,24 @@ import React from "react";
 import "../scss/about.scss";
 import { motion as m } from "framer-motion";
 import Footer from "../components/Footer/footer";
+import Waves from "../images/wave.svg";
 
 const About = () => {
   return (
     <>
+    <div className="Site999">
       <div className="about">
+        <div className="about1">
         <div className="aboutItem">
-          <m.h1
+          <m.h1 className="QuemSomos"
             initial={{ y: "100%" }}
             animate={{ y: "0%" }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            Quem somos
+            Quem somos?
           </m.h1>
           <m.p
+            className="textabout"
             initial={{ y: "100%" }}
             animate={{ y: "0%" }}
             transition={{ duration: 0.75, ease: "easeOut" }}
@@ -27,6 +31,9 @@ const About = () => {
             clientes e parceiros, nosso orgulho é fazer parte da vida de amigos
             e parceiros.
           </m.p>
+
+          <img className="ondas" src={Waves} alt="Ondas"/>
+
         </div>
         <div className="img">
           <m.img
@@ -37,7 +44,7 @@ const About = () => {
             alt=""
           />
         </div>
-      </div>
+        </div>
       <div className="about2">
         <div className="prop">
           <m.h1
@@ -104,7 +111,8 @@ const About = () => {
           criando caminhos favoráveis e práticos sem muita burocracia.
         </m.p>
       </div>
-      <Footer />
+      </div>
+      </div>
     </>
   );
 };

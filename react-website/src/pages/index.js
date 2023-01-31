@@ -6,6 +6,7 @@ import image2 from "../images/400mega.png";
 import "../scss/indexStyle.scss";
 import Card from "../components/Card/card";
 import { motion as m } from "framer-motion";
+import Waves from '../images/wave.svg'
 
 
 const images = [image1, image2];
@@ -19,9 +20,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="Site">
+
+    <div className="Site10">
       <m.div
-        className="View"
+        className="View1"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75 }}
@@ -29,22 +31,19 @@ const Home = () => {
         <div
           ref={carousel}
           className="carousel"
-          whileTap={{ cursos: "grabbing" }}
         >
           <m.div
             className="inner-carousel"
-            drag="x"
             initial={{ 
               x: 0
             }}
             animate={{ 
               x: -Width
             }}
-            transition={{ duration: 2, ease: "linear", repeat: Infinity, repeatType: "mirror", repeatDelay: 10}}
+            transition={{ duration: 2, ease: "linear", repeat: Infinity, repeatType: "mirror", repeatDelay: 5}}
             dragConstraints={{ right: 0, left: -Width }}
             dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
             dragElastic={0.5}
-            whileTap={{ cursor: "grabbing" }}
           >
             {images.map((image) => (
               <m.div className="item" key={image}>
@@ -55,6 +54,7 @@ const Home = () => {
         </div>
       </m.div>
       <>
+        <div className="precos">
         <div className="container">
           <m.h1
             initial={{ opacity: 0, y: "100%" }}
@@ -66,7 +66,7 @@ const Home = () => {
           <m.h3
             initial={{ opacity: 0, y: "100%" }}
             animate={{ opacity: 100, y: "0%" }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
           >
             Assine um de nossos planos e navegue em ultra velocidade.
           </m.h3>
@@ -121,39 +121,43 @@ const Home = () => {
 
         />
       </m.div>
+      </div>
       </>
       <>
-        <div className="about">
-          <div className="aboutItem">
-            <m.h1
-              initial={{ y: "100%" }}
-              animate={{ y: "0%" }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-            >
-              Quem somos
-            </m.h1>
-            <m.p
-              initial={{ y: "100%" }}
-              animate={{ y: "0%" }}
-              transition={{ duration: 0.75, ease: "easeOut" }}
-            >
-              Somos um provedor de internet com mais de 10 anos no mercado,
-              atuando no conceito de tecnologia isp, fornecendo serviços de
-              internet, interfone, tv e telefone. Homologados pela Anatel e
-              reconhecido por um dos melhores atendimentos e satisfação por
-              nossos clientes e parceiros, nosso orgulho é fazer parte da vida
-              de amigos e parceiros.
-            </m.p>
-          </div>
-          <div className="img">
-            <m.img
-              initial={{ y: "100%" }}
-              animate={{ y: "0%" }}
-              transition={{ duration: 0.75, ease: "easeOut" }}
-              src="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/03-1024x614.jpeg"
-              alt=""
-            />
-          </div>
+      <div className="about11">
+        <div className="aboutItem1">
+          <m.h1 className="QuemSomos1"
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            Quem somos?
+          </m.h1>
+          <m.p
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+          >
+            Somos um provedor de internet com mais de 10 anos no mercado,
+            atuando no conceito de tecnologia isp, fornecendo serviços de
+            internet, interfone, tv e telefone. Homologados pela Anatel e
+            reconhecido por um dos melhores atendimentos e satisfação por nossos
+            clientes e parceiros, nosso orgulho é fazer parte da vida de amigos
+            e parceiros.
+          </m.p>
+
+          <img className="ondas1" src={Waves} alt="Ondas"/>
+
+        </div>
+        <div className="img">
+          <m.img
+            initial={{ y: "100%" }}
+            animate={{ y: "0%" }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+            src="https://rjtecnologia-pe.com.br/wp-content/uploads/2023/01/03-1024x614.jpeg"
+            alt=""
+          />
+        </div>
         </div>
         <div className="about2">
           <div className="prop">
@@ -222,7 +226,6 @@ const Home = () => {
             burocracia.
           </m.p>
         </div>
-        <Footer />
       </>
     </div>
   );
