@@ -1,5 +1,6 @@
 import React from "react";
 import "../scss/404.scss";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Login = () => {
   return (
@@ -11,6 +12,9 @@ const Login = () => {
         alignItems: "center",
       }}
     >
+      	<a className="whatsapp-link" href="https://web.whatsapp.com/send?phone=5599111112222" target="_blank">
+	      <FaWhatsapp className="fa-whatsapp" />
+        </a>
       <div className="text">
         <div>ERROR</div>
         <h1>404</h1>

@@ -27,10 +27,24 @@ const Home = () => {
   return (
 
     <div className="Site10">
+        <m.a
+        initial={{ opacity: 0, x: "100%" }}
+        animate={{ opacity: 100, x: "0%" }}
+        transition={{ duration: 1 }}
+        whileHover={{
+          scale: 1.2,
+          transition: { duration: 0.5 },
+        }}
+        whileTap={{ scale: 0.9 }}
+        className="whatsapp-link" 
+        href="https://web.whatsapp.com/send?phone=5547992806521" 
+        target="_blank">
+	      <FaWhatsapp className="fa-whatsapp" />
+        </m.a>
       <m.div
         className="View1"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: "100%" }}
+        animate={{ opacity: 100, y: "0%" }}
         transition={{ duration: 0.75 }}
       >
         <div
