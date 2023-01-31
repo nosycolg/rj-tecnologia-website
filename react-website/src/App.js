@@ -17,7 +17,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 3000);
   }, []);
   return (
     <>
@@ -25,8 +25,8 @@ function App() {
         <div className="LoadScene">
         <m.img src={logo} 
           className="imgloading"
-          initial={{ opacity: 0, width: "70%" }}
-          animate={{ opacity: 100, width: "60%" }}
+          initial={{ opacity: 0, width: "60%" }}
+          animate={{ opacity: 100, width: "40%" }}
           transition={{ duration: 0.75, ease: "easeOut" }}       
         />
         </div>

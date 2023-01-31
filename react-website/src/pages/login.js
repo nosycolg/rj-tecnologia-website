@@ -22,7 +22,7 @@ const Login = () => {
         <img src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png" />
       </div>
 
-      <div>
+      <div className="allStars">
         <div class="stars stars-big"></div>
         <div class="stars stars-big"></div>
         <div class="stars stars-big"></div>

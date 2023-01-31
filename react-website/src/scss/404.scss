@@ -97,8 +97,8 @@ body {
 
 .stars {
   background-color: #fff;
-  position: absolute;
-  z-index: -1;
+  position: fixed;
+  z-index: 0;
 }
 
 $stars-big-count: 10;
@@ -113,7 +113,7 @@ $stars-big: 1px;
 @for $i from 1 through $stars-big-count {
   .stars-big {
     &:nth-child(#{$i}) {
-      animation-delay: random(1000) + ms;
+      animation-delay: random(5000) + ms;
       top: random(100) + vh;
     }
   }
