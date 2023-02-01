@@ -4,9 +4,14 @@
   margin: auto;
 }
 
+.View1{
+  z-index: 99;
+}
+
 .inner-carousel {
   display: flex;
   gap: 20px;
+  z-index: 99;
 }
 
 .item {
@@ -22,6 +27,8 @@
 }
 
 .carousel {
+  position: relative;
+  z-index: 9999;
   margin: 30px;
   cursor: grab;
   overflow: hidden;
@@ -49,21 +56,20 @@
 }
 
 .aboutItem1 {
+  box-shadow: 2px 2px 100px black;
   border-radius: 300px 700px 670px 330px / 300px 280px 720px 700px;
   background-color: rgb(255, 255, 255);
   display: flex;
   width: 50%;
-  height: 800px;
+  height: 700px;
   flex-direction: column;
   justify-content: center;
 
-  align-items: right;
-
-  @media screen and (max-width: 412px) {
+  @media screen and (max-width: 480px){
     display: flex;
-    height: 50%;
-    justify-content: center;
-    align-items: center;
+    flex: column;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
@@ -71,6 +77,18 @@
   max-width: 1879px;
   position:absolute;
   top: 1870px;
+
+  @media screen and (max-width: 1360px) {
+    top: 1670px;
+  }
+
+
+
+  @media screen and (max-width: 480px){
+    height: 670px;
+    top: 3270px;
+    
+  }
 }
 
 .aboutItem1 h1 {
@@ -88,6 +106,7 @@
   text-align: center;
   color: rgb(0, 0, 0);
   font-weight: bold;
+  width: 90%;
   @media screen and (max-width: 730px) {
     width: 600px;
   }
@@ -255,11 +274,11 @@
 
   align-items: right;
 
-  @media screen and (max-width: 412px) {
+  @media screen and (max-width: 480px){
     display: flex;
-    height: 800px;
-    justify-content: center;
-    align-items: center;
+    flex: column;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
@@ -311,5 +330,44 @@
   margin-left: 15px;
 
 }
+
+.wrap2 {
+  z-index: -9999;
+  
+
+}
+
+.svg2 {
+	z-index: -9999;
+	stroke:#ff000057;
+	position:absolute;
+	bottom: -100vh;
+	transform-style: preserve-3d;
+	max-width: 1860px;
+}
+
+$total: 40;
+@for $i from 1 through $total {
+	$scale:random(2) - .4;
+
+	.svg2:nth-child(#{$i}){
+		left:random(120) * 1% - 20;
+		animation: raise#{$i} 6 + random(15) +s linear infinite;
+		animation-delay:random(5) - 5 + s;
+		transform: scale(.3 * $i - .6) rotate(random(360) + deg);
+
+		filter: blur($i - 6 + px);
+
+	  @keyframes raise#{$i} {
+		  to{
+			overflow: hidden;
+			 bottom:10vw;
+			 transform: scale(.3 * $i - .6) rotate(random(360) + deg);
+       z-index: -10;
+			}
+		}
+	}
+}
+
 
 
