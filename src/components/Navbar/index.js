@@ -1,5 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
-import { motion } from "framer-motion";
 
 import {
   Nav,
@@ -39,15 +39,11 @@ const Navbar = () => {
           </NavLink>
           <NavBtn>
             <NavBtnLink activestyle>
-            
               {" "}
               Central do Cliente
             </NavBtnLink>
           </NavBtn>
         </NavMenu>
-        {/* <NavBtn>
-                <NavBtnLink to="/sigin">Central do Cliente</NavBtnLink>
-            </NavBtn> */}
       </Nav>
     </>
   );

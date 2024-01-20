@@ -9,9 +9,9 @@ import Contact from "./pages/contact";
 import Login from "./pages/login";
 import Footer from "./components/Footer/footer";
 import logo from "./images/logo.png";
-import {motion as m} from 'framer-motion';
+import { motion as m } from 'framer-motion';
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
@@ -23,12 +23,12 @@ function App() {
     <>
       {loading ? (
         <div className="LoadScene">
-        <m.img src={logo} 
-          className="imgloading"
-          initial={{ opacity: 0, width: "60%" }}
-          animate={{ opacity: 100, width: "40%" }}
-          transition={{ duration: 0.75, ease: "easeOut" }}       
-        />
+          <m.img src={logo}
+            className="imgloading"
+            initial={{ opacity: 0, width: "60%" }}
+            animate={{ opacity: 100, width: "40%" }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+          />
         </div>
       ) : (
         <div className="app">
