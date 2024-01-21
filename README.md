@@ -18,7 +18,7 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
 1. Clone este repositório em sua máquina local:
 
    ```bash
-    git clone https://github.com/seu-usuario/nome-do-projeto.git
+    git clone https://github.com/nosycolg/rj-tecnologia-website.git
 
 2. Navegue até o diretório do projeto:
     ```bash
