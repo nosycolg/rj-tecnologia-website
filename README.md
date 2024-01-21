@@ -22,7 +22,7 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
 
 2. Navegue até o diretório do projeto:
     ```bash
-    cd nome-do-projeto
+    cd rj-tecnologia-website
 
 3. Instale as dependências do projeto:
 
